@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mobile Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">MobiTech</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <div class="contact-header">
+            <h1>Get in Touch</h1>
+            <p>Have questions about our mobile phones or your order? We're here to help.</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Business Information</h2>
+                <div class="info-item">
+                    <span class="icon">📍</span>
+                    <div>
+                        <h3>Our Store</h3>
+                        <p>123 Tech Avenue, Silicon Valley<br>CA 94025, United States</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="icon">📞</span>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+1 (555) 123-4567<br>Mon-Fri, 9am to 6pm</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="icon">✉️</span>
+                    <div>
+                        <h3>Email</h3>
+                        <p>support@mobitech.com<br>sales@mobitech.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" action="#" method="POST">
+                <h2>Send us a Message</h2>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MobiTech. All rights reserved.</p>
+    </footer>
+</body>
+</html>
