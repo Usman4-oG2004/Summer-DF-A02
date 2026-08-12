@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products Catalog | ApexPhones Online Store</title>
+  <meta name="description" content="Explore the latest flagship, gaming, and foldable mobile phones at ApexPhones. Unbeatable prices, full specifications, and instant filters.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-mesh"></div>
+
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <span class="logo-text">ApexPhones</span>
+        <span class="logo-tag">Store</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link active">Products</a></li>
+          <li><a href="product-details.html" class="nav-link">Product Details</a></li>
+          <li><a href="promotions.html" class="nav-link">Promotions</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" title="Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Cart</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="hero-container">
+      <nav class="breadcrumb">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span style="color: var(--text-main); font-weight: 600;">Products</span>
+      </nav>
+      <h1 class="page-title">Explore Smartphones</h1>
+      <p class="page-subtitle">Discover top-tier flagship smartphones, foldable innovation, gaming powerhouses, and budget performance devices with official warranties.</p>
+    </div>
+  </section>
+
+  <main class="main-wrapper">
+    <div class="products-layout">
+
+      <aside class="filter-sidebar">
+        <div class="filter-header">
+          <h3 class="filter-title"><i class="fa-solid fa-sliders"></i> Filter Phones</h3>
+          <button class="reset-btn" id="resetFiltersBtn">Reset All</button>
+        </div>
+
+        <div class="filter-section">
+          <h4 class="filter-section-title">Search</h4>
+          <div class="search-input-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search phone name, CPU...">
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h4 class="filter-section-title">Brand</h4>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <span class="checkbox-custom">
+                <input type="checkbox" class="brand-filter" value="apple" checked> Apple
+              </span>
+              <span class="item-count">1</span>
+            </label>
+            <label class="checkbox-label">
+              <span class="checkbox-custom">
+                <input type="checkbox" class="brand-filter" value="samsung" checked> Samsung
+              </span>
+              <span class="item-count">2</span>
+            </label>
+            <label class="checkbox-label">
+              <span class="checkbox-custom">
+                <input type="checkbox" class="brand-filter" value="google" checked> Google
+              </span>
+              <span class="item-count">1</span>
+            </label>
+            <label class="checkbox-label">
+              <span class="checkbox-custom">
+                <input type="checkbox" class="brand-filter" value="oneplus" checked> OnePlus
+              </span>
+              <span class="item-count">1</span>
+            </label>
+            <label class="checkbox-label">
+              <span class="checkbox-custom">
+                <input type="checkbox" class="brand-filter" value="xiaomi" checked> Xiaomi
+              </span>
+              <span class="item-count">1</span>
+            </label>
+            <label class="checkbox-label">
+              <span class="checkbox-custom">
+                <input type="checkbox" class="brand-filter" value="nothing" checked> Nothing
+              </span>
+              <span class="item-count">1</span>
+            </label>
+            <label class="checkbox-label">
+              <span class="checkbox-custom">
+                <input type="checkbox" class="brand-filter" value="asus" checked> ASUS
+              </span>
+              <span class="item-count">1</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h4 class="filter-section-title">Max Price</h4>
+          <div class="price-range-box">
+            <input type="range" id="priceSlider" class="price-slider" min="500" max="2000" step="50" value="2000">
+            <div class="price-labels">
+              <span>$500</span>
+              <span id="priceValue" style="color: var(--accent-cyan);">$2,000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h4 class="filter-section-title">Category</h4>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <span class="checkbox-custom">
+                <input type="checkbox" class="cat-filter" value="flagship" checked> Flagship
+              </span>
+            </label>
+            <label class="checkbox-label">
+              <span class="checkbox-custom">
+                <input type="checkbox" class="cat-filter" value="gaming" checked> Gaming
+              </span>
+            </label>
+            <label class="checkbox-label">
+              <span class="checkbox-custom">
+                <input type="checkbox" class="cat-filter" value="foldable" checked> Foldable
+              </span>
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <section class="products-container">
+
+        <div class="products-toolbar">
+          <div class="results-count">
+            Showing <span id="visibleCount">8</span> of <span>8</span> Phones
+          </div>
+
+          <div class="toolbar-controls">
+            <div class="sort-box">
+              <label for="sortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort By:</label>
+              <select id="sortSelect" class="sort-select">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+              </select>
+            </div>
+
+            <div class="view-toggle">
+              <button class="view-btn active" title="Grid View"><i class="fa-solid fa-table-cells-large"></i></button>
+              <button class="view-btn" title="List View"><i class="fa-solid fa-list"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+
+          <article class="product-card" data-brand="apple" data-category="flagship" data-price="1199" data-rating="4.9">
+            <div class="badge-container">
+              <span class="badge badge-hot">Top Seller</span>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=500&q=80" alt="iPhone 15 Pro Max" class="product-image">
+            </div>
+
+            <span class="product-brand">Apple</span>
+            <h3 class="product-title">iPhone 15 Pro Max</h3>
+
+            <div class="rating-row">
+              <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+              <span>4.9 (342 reviews)</span>
+            </div>
+
+            <div class="specs-chips">
+              <span class="chip">A17 Pro</span>
+              <span class="chip">256GB</span>
+              <span class="chip">48MP 5x Zoom</span>
+            </div>
+
+            <div class="product-card-footer">
+              <div class="price-box">
+                <span class="price-current">$1,199</span>
+                <span class="price-old">$1,299</span>
+              </div>
+              <div class="action-btns">
+                <button class="btn-icon quick-view-btn" data-id="1" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                <button class="btn-primary add-cart-btn" data-name="iPhone 15 Pro Max"><i class="fa-solid fa-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-brand="samsung" data-category="flagship" data-price="1299" data-rating="4.8">
+            <div class="badge-container">
+              <span class="badge badge-new">New AI</span>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80" alt="Samsung Galaxy S24 Ultra" class="product-image">
+            </div>
+
+            <span class="product-brand">Samsung</span>
+            <h3 class="product-title">Galaxy S24 Ultra</h3>
+
+            <div class="rating-row">
+              <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+              <span>4.8 (215 reviews)</span>
+            </div>
+
+            <div class="specs-chips">
+              <span class="chip">Snapdragon 8 Gen 3</span>
+              <span class="chip">200MP</span>
+              <span class="chip">S-Pen</span>
+            </div>
+
+            <div class="product-card-footer">
+              <div class="price-box">
+                <span class="price-current">$1,299</span>
+                <span class="price-old">$1,399</span>
+              </div>
+              <div class="action-btns">
+                <button class="btn-icon quick-view-btn" data-id="2" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                <button class="btn-primary add-cart-btn" data-name="Galaxy S24 Ultra"><i class="fa-solid fa-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-brand="google" data-category="flagship" data-price="999" data-rating="4.7">
+            <div class="badge-container">
+              <span class="badge badge-discount">Save $100</span>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=500&q=80" alt="Google Pixel 8 Pro" class="product-image">
+            </div>
+
+            <span class="product-brand">Google</span>
+            <h3 class="product-title">Google Pixel 8 Pro</h3>
+
+            <div class="rating-row">
+              <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+              <span>4.7 (189 reviews)</span>
+            </div>
+
+            <div class="specs-chips">
+              <span class="chip">Tensor G3</span>
+              <span class="chip">Magic Editor</span>
+              <span class="chip">120Hz OLED</span>
+            </div>
+
+            <div class="product-card-footer">
+              <div class="price-box">
+                <span class="price-current">$899</span>
+                <span class="price-old">$999</span>
+              </div>
+              <div class="action-btns">
+                <button class="btn-icon quick-view-btn" data-id="3" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                <button class="btn-primary add-cart-btn" data-name="Pixel 8 Pro"><i class="fa-solid fa-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-brand="oneplus" data-category="flagship" data-price="799" data-rating="4.8">
+            <div class="badge-container">
+              <span class="badge badge-hot">100W Fast Charge</span>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80" alt="OnePlus 12" class="product-image">
+            </div>
+
+            <span class="product-brand">OnePlus</span>
+            <h3 class="product-title">OnePlus 12 5G</h3>
+
+            <div class="rating-row">
+              <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+              <span>4.8 (140 reviews)</span>
+            </div>
+
+            <div class="specs-chips">
+              <span class="chip">Snapdragon 8 Gen 3</span>
+              <span class="chip">Hasselblad Cam</span>
+              <span class="chip">5400 mAh</span>
+            </div>
+
+            <div class="product-card-footer">
+              <div class="price-box">
+                <span class="price-current">$799</span>
+                <span class="price-old">$899</span>
+              </div>
+              <div class="action-btns">
+                <button class="btn-icon quick-view-btn" data-id="4" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                <button class="btn-primary add-cart-btn" data-name="OnePlus 12"><i class="fa-solid fa-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-brand="xiaomi" data-category="flagship" data-price="1149" data-rating="4.9">
+            <div class="badge-container">
+              <span class="badge badge-new">Leica Optics</span>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=500&q=80" alt="Xiaomi 14 Ultra" class="product-image">
+            </div>
+
+            <span class="product-brand">Xiaomi</span>
+            <h3 class="product-title">Xiaomi 14 Ultra</h3>
+
+            <div class="rating-row">
+              <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+              <span>4.9 (98 reviews)</span>
+            </div>
+
+            <div class="specs-chips">
+              <span class="chip">1-Inch Sensor</span>
+              <span class="chip">16GB RAM</span>
+              <span class="chip">90W Charge</span>
+            </div>
+
+            <div class="product-card-footer">
+              <div class="price-box">
+                <span class="price-current">$1,149</span>
+                <span class="price-old">$1,249</span>
+              </div>
+              <div class="action-btns">
+                <button class="btn-icon quick-view-btn" data-id="5" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                <button class="btn-primary add-cart-btn" data-name="Xiaomi 14 Ultra"><i class="fa-solid fa-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-brand="nothing" data-category="flagship" data-price="699" data-rating="4.6">
+            <div class="badge-container">
+              <span class="badge badge-hot">Glyph LED</span>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?auto=format&fit=crop&w=500&q=80" alt="Nothing Phone (2)" class="product-image">
+            </div>
+
+            <span class="product-brand">Nothing</span>
+            <h3 class="product-title">Nothing Phone (2)</h3>
+
+            <div class="rating-row">
+              <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+              <span>4.6 (176 reviews)</span>
+            </div>
+
+            <div class="specs-chips">
+              <span class="chip">Glyph Interface</span>
+              <span class="chip">Nothing OS 2.5</span>
+              <span class="chip">50MP Dual</span>
+            </div>
+
+            <div class="product-card-footer">
+              <div class="price-box">
+                <span class="price-current">$699</span>
+                <span class="price-old">$749</span>
+              </div>
+              <div class="action-btns">
+                <button class="btn-icon quick-view-btn" data-id="6" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                <button class="btn-primary add-cart-btn" data-name="Nothing Phone (2)"><i class="fa-solid fa-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-brand="asus" data-category="gaming" data-price="1199" data-rating="4.9">
+            <div class="badge-container">
+              <span class="badge badge-hot">165Hz Beast</span>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1546054454-aa26e2b734c7?auto=format&fit=crop&w=500&q=80" alt="ASUS ROG Phone 8 Pro" class="product-image">
+            </div>
+
+            <span class="product-brand">ASUS</span>
+            <h3 class="product-title">ROG Phone 8 Pro</h3>
+
+            <div class="rating-row">
+              <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+              <span>4.9 (84 reviews)</span>
+            </div>
+
+            <div class="specs-chips">
+              <span class="chip">24GB RAM</span>
+              <span class="chip">AirTriggers</span>
+              <span class="chip">165Hz Display</span>
+            </div>
+
+            <div class="product-card-footer">
+              <div class="price-box">
+                <span class="price-current">$1,199</span>
+                <span class="price-old">$1,299</span>
+              </div>
+              <div class="action-btns">
+                <button class="btn-icon quick-view-btn" data-id="7" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                <button class="btn-primary add-cart-btn" data-name="ROG Phone 8 Pro"><i class="fa-solid fa-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-brand="samsung" data-category="foldable" data-price="1799" data-rating="4.7">
+            <div class="badge-container">
+              <span class="badge badge-new">Foldable</span>
+            </div>
+            <button class="wishlist-btn" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=500&q=80" alt="Galaxy Z Fold 5" class="product-image">
+            </div>
+
+            <span class="product-brand">Samsung</span>
+            <h3 class="product-title">Galaxy Z Fold 5</h3>
+
+            <div class="rating-row">
+              <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+              <span>4.7 (112 reviews)</span>
+            </div>
+
+            <div class="specs-chips">
+              <span class="chip">7.6" Main Screen</span>
+              <span class="chip">Flex Hinge</span>
+              <span class="chip">Multitasking</span>
+            </div>
+
+            <div class="product-card-footer">
+              <div class="price-box">
+                <span class="price-current">$1,799</span>
+                <span class="price-old">$1,919</span>
+              </div>
+              <div class="action-btns">
+                <button class="btn-icon quick-view-btn" data-id="8" title="Quick View"><i class="fa-solid fa-eye"></i></button>
+                <button class="btn-primary add-cart-btn" data-name="Galaxy Z Fold 5"><i class="fa-solid fa-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <img id="modalImg" src="" alt="Mobile Phone" style="max-height: 250px; object-fit: contain;">
+      </div>
+      <div>
+        <span id="modalBrand" class="product-brand">Brand</span>
+        <h2 id="modalTitle" style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; color: #fff;">Phone Name</h2>
+        <p id="modalPrice" style="font-size: 1.3rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 1rem;">$0</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Experience unmatched performance, high-speed connectivity, professional-grade camera sensors, and all-day battery life with official warranty coverage.</p>
+        <a href="product-details.html" class="btn-primary" style="display: inline-flex;"><i class="fa-solid fa-arrow-right"></i> View Full Details</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <span class="logo-text">ApexPhones</span>
+        </a>
+        <p>Your premier destination for authentic mobile devices, official warranties, and fast nationwide delivery.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products Catalog</a></li>
+          <li><a href="product-details.html">Product Details</a></li>
+          <li><a href="promotions.html">Hot Promotions</a></li>
+          <li><a href="contact.html">Contact Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#">Flagship Smartphones</a></li>
+          <li><a href="#">Gaming Phones</a></li>
+          <li><a href="#">Foldable Devices</a></li>
+          <li><a href="#">Budget Friendly</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Warranty Policy</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 ApexPhones Store. Developed for DF-A02 Group Assignment.</p>
+      <div style="display: flex; gap: 1rem; font-size: 1.1rem;">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-apple-pay"></i>
+        <i class="fa-brands fa-google-pay"></i>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
