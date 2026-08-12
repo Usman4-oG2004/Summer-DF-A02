@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | ApexPhones Online Store</title>
+  <meta name="description" content="Full specifications, pricing, and reviews for the latest flagship smartphones at ApexPhones.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-mesh"></div>
+
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <span class="logo-text">ApexPhones</span>
+        <span class="logo-tag">Store</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="product-details.html" class="nav-link active">Product Details</a></li>
+          <li><a href="promotions.html" class="nav-link">Promotions</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" title="Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Cart</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="hero-container">
+      <nav class="breadcrumb">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="products.html">Products</a>
+        <span class="breadcrumb-separator">/</span>
+        <span style="color: var(--text-main); font-weight: 600;">iPhone 15 Pro Max</span>
+      </nav>
+      <h1 class="page-title">Product Details</h1>
+      <p class="page-subtitle">Full specifications, pricing, and everything you need to know before you buy.</p>
+    </div>
+  </section>
+
+  <main class="main-wrapper">
+    <div class="product-detail-layout">
+
+      <div class="product-gallery">
+        <div class="product-image-wrap product-image-wrap-large">
+          <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80" alt="iPhone 15 Pro Max" class="product-image" id="detailImage">
+        </div>
+        <div class="thumbnail-row">
+          <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=200&q=80" alt="thumbnail 1" class="thumbnail active">
+          <img src="https://images.unsplash.com/photo-1695048065906-4d3c4a1a5b6b?auto=format&fit=crop&w=200&q=80" alt="thumbnail 2" class="thumbnail">
+          <img src="https://images.unsplash.com/photo-1695048134233-6be91b2b5f4c?auto=format&fit=crop&w=200&q=80" alt="thumbnail 3" class="thumbnail">
+        </div>
+      </div>
+
+      <div class="product-info-panel">
+        <span class="badge badge-hot">Top Seller</span>
+        <span class="product-brand">Apple</span>
+        <h2 class="product-title product-title-large">iPhone 15 Pro Max</h2>
+
+        <div class="rating-row">
+          <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+          <span>4.9 (342 reviews)</span>
+        </div>
+
+        <div class="price-box">
+          <span class="price-current">$1,199</span>
+          <span class="price-old">$1,299</span>
+        </div>
+
+        <p class="product-description">
+          The iPhone 15 Pro Max features a titanium design, the powerful A17 Pro chip, and a pro-grade camera system with 5x telephoto zoom. Built for performance, photography, and all-day battery life.
+        </p>
+
+        <div class="specs-chips">
+          <span class="chip">A17 Pro Chip</span>
+          <span class="chip">256GB Storage</span>
+          <span class="chip">48MP 5x Zoom</span>
+          <span class="chip">Titanium Body</span>
+        </div>
+
+        <div class="quantity-row">
+          <label for="qtyInput">Quantity:</label>
+          <div class="quantity-selector">
+            <button class="qty-btn" id="qtyMinus">-</button>
+            <input type="number" id="qtyInput" value="1" min="1" class="qty-input">
+            <button class="qty-btn" id="qtyPlus">+</button>
+          </div>
+        </div>
+
+        <div class="action-btns detail-action-btns">
+          <button class="btn-primary add-cart-btn" data-name="iPhone 15 Pro Max"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+          <button class="btn-icon wishlist-btn" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+        </div>
+
+        <ul class="spec-list">
+          <li><strong>Display:</strong> 6.7" Super Retina XDR OLED</li>
+          <li><strong>Processor:</strong> A17 Pro, 6-core CPU</li>
+          <li><strong>Camera:</strong> 48MP Main + 12MP Ultra Wide + 12MP Telephoto</li>
+          <li><strong>Battery:</strong> Up to 29 hours video playback</li>
+          <li><strong>Storage Options:</strong> 256GB / 512GB / 1TB</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <span class="logo-text">ApexPhones</span>
+        </a>
+        <p>Your premier destination for authentic mobile devices, official warranties, and fast nationwide delivery.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products Catalog</a></li>
+          <li><a href="product-details.html">Product Details</a></li>
+          <li><a href="promotions.html">Hot Promotions</a></li>
+          <li><a href="contact.html">Contact Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#">Flagship Smartphones</a></li>
+          <li><a href="#">Gaming Phones</a></li>
+          <li><a href="#">Foldable Devices</a></li>
+          <li><a href="#">Budget Friendly</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Warranty Policy</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 ApexPhones Store. Developed for DF-A02 Group Assignment.</p>
+      <div style="display: flex; gap: 1rem; font-size: 1.1rem;">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-apple-pay"></i>
+        <i class="fa-brands fa-google-pay"></i>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
