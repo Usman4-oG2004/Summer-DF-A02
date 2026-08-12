@@ -3,42 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Phone Store - Home</title>
+    <title>ApexPhones Store - Premium Mobile Phones</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Mobile Phone Store</h1>
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">📱</div>
+                <span class="logo-text">ApexPhones</span>
+                <span class="logo-tag">STORE</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="product-details.html" class="nav-link">Product Details</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="cart-btn">
+                    🛒 Cart
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
     </header>
-    
-    <main>
-        <section class="hero">
-            <h2>Welcome to Our Store</h2>
-            <p>Find the best mobile phones at great prices</p>
-        </section>
-        
-        <section class="featured">
-            <h2>Featured Products</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <h3>iPhone 15</h3>
-                    <p>$999</p>
+
+    <section class="page-hero">
+        <div class="hero-container">
+            <h1 class="page-title">Welcome to ApexPhones</h1>
+            <p class="page-subtitle">Discover premium mobile phones with cutting-edge technology and unbeatable prices</p>
+        </div>
+    </section>
+
+    <main class="main-wrapper">
+        <!-- Featured Section -->
+        <section class="featured-section" style="margin-bottom: 4rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 2rem; color: #f3f4f6;">Featured Products</h2>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="badge-container">
+                        <span class="badge badge-hot">HOT</span>
+                    </div>
+                    <button class="wishlist-btn">♥</button>
+                    
+                    <div class="product-image-wrap">
+                        <div style="font-size: 4rem;">📱</div>
+                    </div>
+                    
+                    <div class="product-brand">Apple</div>
+                    <h3 class="product-title">iPhone 15 Pro</h3>
+                    
+                    <div class="rating-row">
+                        <span class="stars">★★★★★</span>
+                        <span>(128 reviews)</span>
+                    </div>
+                    
+                    <div class="specs-chips">
+                        <span class="chip">256GB</span>
+                        <span class="chip">6.1"</span>
+                        <span class="chip">A17 Pro</span>
+                    </div>
+                    
+                    <div class="product-card-footer">
+                        <div class="price-box">
+                            <div class="price-current">$999</div>
+                            <div class="price-old">$1,099</div>
+                        </div>
+                        <div class="action-btns">
+                            <button class="btn-primary">🛒 Add</button>
+                            <button class="btn-icon">👁️</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="product">
-                    <h3>Samsung S24</h3>
-                    <p>$899</p>
+
+                <div class="product-card">
+                    <div class="badge-container">
+                        <span class="badge badge-new">NEW AI</span>
+                    </div>
+                    <button class="wishlist-btn">♥</button>
+                    
+                    <div class="product-image-wrap">
+                        <div style="font-size: 4rem;">📱</div>
+                    </div>
+                    
+                    <div class="product-brand">Samsung</div>
+                    <h3 class="product-title">Galaxy S24 Ultra</h3>
+                    
+                    <div class="rating-row">
+                        <span class="stars">★★★★★</span>
+                        <span>(95 reviews)</span>
+                    </div>
+                    
+                    <div class="specs-chips">
+                        <span class="chip">512GB</span>
+                        <span class="chip">6.8"</span>
+                        <span class="chip">Snapdragon 8 Gen 3</span>
+                    </div>
+                    
+                    <div class="product-card-footer">
+                        <div class="price-box">
+                            <div class="price-current">$1,299</div>
+                            <div class="price-old">$1,399</div>
+                        </div>
+                        <div class="action-btns">
+                            <button class="btn-primary">🛒 Add</button>
+                            <button class="btn-icon">👁️</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="badge-container">
+                        <span class="badge badge-discount">SAVE $100</span>
+                    </div>
+                    <button class="wishlist-btn">♥</button>
+                    
+                    <div class="product-image-wrap">
+                        <div style="font-size: 4rem;">📱</div>
+                    </div>
+                    
+                    <div class="product-brand">Google</div>
+                    <h3 class="product-title">Pixel 8 Pro</h3>
+                    
+                    <div class="rating-row">
+                        <span class="stars">★★★★☆</span>
+                        <span>(87 reviews)</span>
+                    </div>
+                    
+                    <div class="specs-chips">
+                        <span class="chip">256GB</span>
+                        <span class="chip">6.7"</span>
+                        <span class="chip">Tensor G3</span>
+                    </div>
+                    
+                    <div class="product-card-footer">
+                        <div class="price-box">
+                            <div class="price-current">$799</div>
+                            <div class="price-old">$899</div>
+                        </div>
+                        <div class="action-btns">
+                            <button class="btn-primary">🛒 Add</button>
+                            <button class="btn-icon">👁️</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- CTA Section -->
+        <section style="text-align: center; padding: 3rem; background: rgba(59, 130, 246, 0.1); border-radius: 20px; border: 1px solid rgba(59, 130, 246, 0.2);">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #fff;">Ready to Upgrade?</h2>
+            <p style="color: #9ca3af; margin-bottom: 2rem; font-size: 1.1rem;">Browse our complete collection of premium smartphones</p>
+            <a href="products.html" style="background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); color: white; padding: 1rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 700; display: inline-block;">
+                Shop All Products →
+            </a>
+        </section>
     </main>
-    
-    <footer>
-        <p>&copy; 2026 Mobile Phone Store</p>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">ApexPhones</h3>
+                <p>Your destination for premium mobile phones with the latest technology and competitive pricing.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ApexPhones Store. All rights reserved.</p>
+            <p>Crafted with ❤️ for tech enthusiasts</p>
+        </div>
     </footer>
 </body>
 </html>
