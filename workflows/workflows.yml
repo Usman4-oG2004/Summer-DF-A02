@@ -1,34 +1,36 @@
-name: Website Workflow
+name: Deploy Website
 
 on:
   push:
     branches:
       - develop
-  pull_request:
-    branches:
-      - develop
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Check HTML files
-        run: |
-          test -f index.html
-          test -f products.html
-          test -f product-details.html
-          test -f contact.html
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      - name: Check CSS and JavaScript
-        run: |
-          test -f style.css
-          test -f script.js
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
 
-      - name: Workflow successful
-        run: echo "Website files checked successfully!"
-
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
