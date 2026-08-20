@@ -1,1 +1,34 @@
+name: Website Workflow
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Check HTML files
+        run: |
+          test -f index.html
+          test -f products.html
+          test -f product-details.html
+          test -f contact.html
+
+      - name: Check CSS and JavaScript
+        run: |
+          test -f style.css
+          test -f script.js
+
+      - name: Workflow successful
+        run: echo "Website files checked successfully!"
 
